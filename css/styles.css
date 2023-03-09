@@ -67,7 +67,8 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -80,13 +81,17 @@ body {
 }
 
 .btn {
+  min-width: 160px;
+  height: 40px;
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  cursor: pointer;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  background-color: transparent;
 }
 
 .section-title {
@@ -115,14 +120,31 @@ body {
   background-color: gray;
   padding-top: 32px;
 }
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
 .header-navigation {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
 }
 .header-logo {
+  margin-right: 131px;
 }
 .header-list {
+  display: flex;
+  gap: 30px;
 }
-.header-item {
-}
+/* .header-item:not(:last-child) {
+  margin-right: 30px;
+} */
+
+/* .header-item + .header-item {
+  margin-left: 30px;
+} */
+
 .header-link {
   font-weight: 600;
   font-size: 12px;
@@ -142,6 +164,7 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #ffffff;
+  margin-right: 43px;
 }
 .header-btn {
   color: #ffffff;
@@ -150,9 +173,19 @@ body {
 /**--------------------- HERO ---------------------*/
 
 .hero {
+}
+
+.hero-container {
+  display: flex;
+}
+
+.hero-wrap {
   background-color: #7d8397;
+  flex-grow: 1;
+  padding: 272px 100px 238px;
 }
 .hero-list {
+  width: 100px;
 }
 
 .hero-item {
@@ -184,11 +217,24 @@ body {
 
 .hero-post-title {
   color: #9da4bd;
+  max-width: 360px;
+  width: 500px;
 }
 
 /**--------------------- ABOUT ---------------------*/
 
+.about-container {
+  display: flex;
+}
+
 .about-list {
+  display: flex;
+  gap: 30px;
+  margin-right: 30px;
+}
+
+.about-wrap {
+  padding-right: 100px;
 }
 
 .about-item {
@@ -230,13 +276,23 @@ body {
   color: var(--first-title-color);
   margin-bottom: 44px;
 }
+
+.prices-list-wrap {
+  display: flex;
+  justify-content: space-between;
+}
 .prices-list {
   border: 1px solid #ffffff;
   padding: 30px 20px;
+  width: calc((100% - 30px) / 2);
+
+  /* width: 570px; */
 }
 
 .prices-item {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .prices-item:last-child {
@@ -258,10 +314,37 @@ body {
 
 /**--------------------- BENEFITS ---------------------*/
 
-.benefits-list.list {
+.benefits-container {
+  display: flex;
+  padding-left: 85px;
+}
+
+.benefits-wrap {
+  max-width: 500px;
+  padding-top: 9px;
 }
 
 .benefits-list {
+  display: flex;
+  width: 370px;
+  flex-wrap: wrap;
+
+  margin-right: 130px;
+}
+
+.benefits-item {
+  width: 170px;
+  height: 133px;
+  background-color: #f7f7f7;
+  border: 1px solid;
+  padding: 20px 24px;
+}
+.benefits-item:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.benefits-item:nth-child(even) {
+  margin-top: 30px;
 }
 
 .benefits-item .count {
@@ -271,6 +354,8 @@ body {
   text-align: center;
   letter-spacing: 0.05em;
   color: #303030;
+  display: block;
+  margin-bottom: 6px;
 }
 
 .benefits-item .count + p {
@@ -310,9 +395,12 @@ body {
 }
 
 .barbers-list {
+  display: flex;
+  gap: 30px;
 }
 
 .barbers-item {
+  width: calc((100% - 60px) / 3);
 }
 
 .barbers-item-wrap {
@@ -333,4 +421,22 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: #ff6c00;
+}
+
+/**--------------------- Gallery ---------------------*/
+
+.gallery-pre-title {
+  color: #303030;
+  margin-bottom: 44px;
+}
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 50px;
+}
+
+.gallery-item {
+  width: calc((100% - 90px) / 4);
 }
