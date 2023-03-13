@@ -46,7 +46,9 @@
         <a class="header-tel link" href="tel:+380441111111"
           >+38 044 111 11 11</a
         >
-        <button class="header-btn btn" type="button">Online-booking</button>
+        <button class="header-btn btn" type="button" data-modal-open>
+          Online-booking
+        </button>
       </div>
     </header>
     <main>
@@ -210,12 +212,21 @@
           <h2 class="barbers-title section-title">Our barbers</h2>
           <ul class="barbers-list list">
             <li class="barbers-item">
-              <img
-                src="./img/barbers-img-1.jpeg"
-                alt="barbers photo"
-                width="370"
-                height="346"
-              />
+              <div class="barbers-top-wrap">
+                <img
+                  src="./img/barbers-img-1.jpeg"
+                  alt="barbers photo"
+                  width="370"
+                  height="346"
+                />
+                <p class="barbers-top-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                  asperiores, laboriosam quis fuga cumque dolore eos ad porro
+                  nulla aliquid nostrum consequuntur molestias, quaerat unde
+                  doloribus fugiat eveniet accusamus impedit!
+                </p>
+              </div>
+
               <div class="barbers-item-wrap">
                 <h3 class="barbers-subtitle">John Smith</h3>
                 <p class="barbers-item-text">Extreme Barber</p>
@@ -360,5 +371,11 @@
       </section>
     </main>
     <footer></footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close" type="button" data-modal-close>X</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
