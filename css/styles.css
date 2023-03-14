@@ -73,7 +73,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 2px solid red;
 }
 
 .section {
@@ -131,13 +130,15 @@ body {
 /**--------------------- HEADER ---------------------*/
 
 .header {
-  background-color: gray;
+  position: absolute;
+  width: 100%;
   padding-top: 32px;
 }
 
 .header-container {
   display: flex;
   align-items: center;
+  padding-right: 30px;
 }
 .header-navigation {
   display: flex;
@@ -202,8 +203,27 @@ body {
   flex-grow: 1;
   padding: 272px 100px 238px;
 }
-.hero-list {
+
+.hero-soc {
   width: 100px;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 27px;
+  padding-bottom: 40px;
+}
+.hero-list {
+  display: flex;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: bottom left;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-list::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
 }
 
 .hero-item {
@@ -301,7 +321,13 @@ body {
 /**--------------------- PRICES ---------------------*/
 
 .prices {
-  background-color: #303030;
+  background-color: #111319;
+  background-image: url(../img/prices-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .prices-pre-title {
   color: rgba(157, 164, 189, 0.6);
@@ -317,7 +343,6 @@ body {
   justify-content: space-between;
 }
 .prices-list {
-  border: 1px solid #ffffff;
   padding: 30px 20px;
   width: calc((100% - 30px) / 2);
 
@@ -430,6 +455,17 @@ body {
   color: #303030;
   display: block;
   margin-bottom: 6px;
+}
+
+.benefits-item .count::after {
+  content: '+';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: calc(22 / 16);
+  text-align: center;
+  color: transparent;
+  vertical-align: top;
+  text-shadow: 0 9px 0 #ff6c00;
 }
 
 .benefits-item .count + p {
@@ -611,18 +647,24 @@ body {
   background-color: rgba(48, 48, 48, 0.498);
   width: 100%;
   height: 100%;
+  transition: opacity 300ms linear, visibility 300ms linear;
 }
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scaleY(1);
   width: 500px;
   min-height: 500px;
   background-color: #ffffff;
   border-radius: 5px;
   padding: 30px;
+  transition: transform 300ms linear;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -250%) scaleY(0);
 }
 
 .modal-close {

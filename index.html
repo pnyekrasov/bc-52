@@ -18,6 +18,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      rel="stylesheet"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link href="./css/styles.css" rel="stylesheet" />
   </head>
 
@@ -46,7 +54,7 @@
         <a class="header-tel link" href="tel:+380441111111"
           >+38 044 111 11 11</a
         >
-        <button class="header-btn btn" type="button" data-modal-open>
+        <button class="header-btn btn" data-modal-open type="button">
           Online-booking
         </button>
       </div>
@@ -54,29 +62,35 @@
     <main>
       <section class="hero">
         <div class="container hero-container">
-          <ul class="hero-list list">
-            <li class="hero-item">
-              <a
-                class="hero-link link"
-                href
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Instagram</a
-              >
-            </li>
-            <li class="hero-item">
-              <a
-                class="hero-link link"
-                href
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Youtube</a
-              >
-            </li>
-          </ul>
+          <div class="hero-soc">
+            <ul class="hero-list list">
+              <li class="hero-item">
+                <a
+                  class="hero-link link"
+                  href
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="hero-item">
+                <a
+                  class="hero-link link"
+                  href
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
           <div class="hero-wrap">
             <p class="hero-pre-title pre-title">A hair salon for men in Kyiv</p>
-            <h1 class="hero-title">BarberShop</h1>
+            <h1
+              class="hero-title animate__animated animate__rubberBand animate__repeat-3 3"
+            >
+              BarberShop
+            </h1>
             <p class="hero-post-title post-title">
               We are experts in trendy men’s haircuts. We work quickly,
               carefully and with style.
@@ -106,7 +120,7 @@
           </ul>
           <div class="about-wrap">
             <p class="about-pre-title pre-title">About</p>
-            <h2 class="about-title section-title">
+            <h2 class="about-title section-title" data-aos="fade-right">
               Best Barbershop in your city
             </h2>
             <p class="about-post-title post-title">
@@ -129,7 +143,9 @@
           <p class="prices-pre-title pre-title">
             Spend your time with the best masters
           </p>
-          <h2 class="prices-title section-title">Services and prices</h2>
+          <h2 class="prices-title section-title" data-aos="zoom-in-up">
+            Services and prices
+          </h2>
           <div class="prices-list-wrap">
             <ul class="prices-list list">
               <li class="prices-item">
@@ -194,7 +210,7 @@
           </ul>
           <div class="benefits-wrap">
             <p class="benefits-pre-title pre-title">Old traditional school</p>
-            <h2 class="benefits-title section-title">
+            <h2 class="benefits-title section-title" data-aos="flip-left">
               ¿Why people come to us?
             </h2>
             <p class="benefits-post-title post-title">
@@ -373,9 +389,13 @@
     <footer></footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-close" type="button" data-modal-close>X</button>
+        <button class="modal-close" data-modal-close type="button">X</button>
       </div>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
