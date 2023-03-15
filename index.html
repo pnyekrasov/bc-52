@@ -387,9 +387,83 @@
       </section>
     </main>
     <footer></footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button class="modal-close" data-modal-close type="button">X</button>
+        <p class="modal-title">Заголовок модального вікна</p>
+        <form class="modal-form">
+          <label class="modal-field"
+            ><span class="input-text">Введіть імя*</span>
+            <span class="input-wrap">
+              <input
+                class="modal-input"
+                name="user-name"
+                type="text"
+                placeholder="Микола"
+                required
+                minlength="2"
+                maxlength="30"
+              />
+              <svg class="modal-icon" width="20" height="20">
+                <use href="./img/icons.svg#icon-facebook"></use>
+              </svg>
+            </span>
+          </label>
+          <div class="modal-field">
+            <label class="input-text" for="user-email">Введіть пошту</label>
+            <div class="input-wrap">
+              <input
+                class="modal-input"
+                id="user-email"
+                name="user-email"
+                type="email"
+                placeholder="Введіть пошту"
+              />
+              <svg class="modal-icon" width="20" height="20">
+                <use href="./img/icons.svg#icon-twitter"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-field">
+            <label class="input-text" for="user-tel">Введіть телефон</label>
+            <input
+              class="modal-input"
+              id="user-tel"
+              name="user-tel"
+              type="tel"
+              title="+380 (96) 111-11-11"
+              placeholder="+380 (96) 111-11-11"
+              required
+            />
+          </div>
+          <div class="modal-field">
+            <label class="input-text" for="user-tel">Введіть коментар</label>
+            <textarea
+              class="modal-textarea"
+              id="user-text"
+              name="user-text"
+              placeholder="коментар"
+            ></textarea>
+          </div>
+          <div class="modal-field">
+            <input
+              class="input-check visually-hidden"
+              id="input-check"
+              name="user-check"
+              type="checkbox"
+              value="true"
+            />
+            <label class="check-text" for="input-check">
+              <span>
+                <svg class="check-icon" width="10" height="8">
+                  <use href="./img/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              Текст для чекбокса і <a href="">посилання</a></label
+            >
+          </div>
+          <button type="submit">Вперед</button>
+        </form>
       </div>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
