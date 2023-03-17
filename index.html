@@ -31,7 +31,7 @@
   </head>
 
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header-container">
         <nav class="header-navigation">
           <a class="header-logo" href>
@@ -58,8 +58,63 @@
         <button class="header-btn btn" data-modal-open type="button">
           Online-booking
         </button>
+        <button class="menu-open-btn" data-menu-open type="button">
+          <svg class="menu-open-icon" width="20" height="20">
+            <use href="./img/icons.svg#icon-hamburger"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mob-menu is-hidden" data-menu>
+        <button class="menu-close-btn" data-menu-close type="button">
+          <svg class="menu-close-icon" width="20" height="20">
+            <use href="./img/icons.svg#icon-linkedin"></use>
+          </svg>
+        </button>
+        <ul class="mob-menu-list list">
+          <li class="mob-menu-item">
+            <a class="mob-menu-link link" href>About</a>
+          </li>
+          <li class="mob-menu-item">
+            <a class="mob-menu-link link" href>Services and prices</a>
+          </li>
+          <li class="mob-menu-item">
+            <a class="mob-menu-link link" href>Barbers</a>
+          </li>
+          <li class="mob-menu-item">
+            <a class="mob-menu-link link" href>Contacts</a>
+          </li>
+        </ul>
+
+        <div class="mob-menu-bottom">
+          <a class="mob-menu-tel link" href="tel:+380441111111"
+            >+38 044 111 11 11</a
+          >
+          <button class="mob-menu-btn btn" data-modal-open type="button">
+            Online-booking
+          </button>
+          <ul class="mob-soc-list list">
+            <li class="mob-soc-item">
+              <a
+                class="mob-soc-link link"
+                href
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >Instagram</a
+              >
+            </li>
+            <li class="mob-soc-item">
+              <a
+                class="mob-soc-link link"
+                href
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >Youtube</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <main>
       <section class="hero">
         <div class="container hero-container">
@@ -233,6 +288,10 @@
                 <img
                   src="./img/barbers-img-1.jpeg"
                   alt="barbers photo"
+                  srcset="
+                    ./img/barbers-img-1.jpeg    1x,
+                    ./img/barbers-img-1-2x.jpeg 2x
+                  "
                   width="370"
                   height="346"
                 />
@@ -320,12 +379,35 @@
           <h2 class="visually-hidden">Gallery</h2>
           <ul class="gallery-list list">
             <li class="gallery-item">
-              <img
-                src="./img/gallery-img-1.jpeg"
-                alt="photo"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/gallery-img-1.jpeg    1x,
+                    ./img/gallery-img-1-2x.jpeg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery-img-1-tab.jpeg    1x,
+                    ./img/gallery-img-1-tab-2x.jpeg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery-img-1-mob.jpeg    1x,
+                    ./img/gallery-img-1-mob-2x.jpeg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./img/gallery-img-1-mob.jpeg"
+                  alt="photo"
+                  width="418"
+                  height="360"
+                />
+              </picture>
             </li>
             <li class="gallery-item">
               <img
@@ -440,5 +522,6 @@
       AOS.init();
     </script>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
