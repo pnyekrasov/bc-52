@@ -42,7 +42,7 @@ img {
 /**--------------------- BASE ---------------------*/
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   /* color: red; */
 }
 
@@ -95,7 +95,7 @@ body {
 }
 
 .section-title {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 42px;
   line-height: 1.17;
   letter-spacing: 0.05em;
@@ -112,7 +112,7 @@ body {
 }
 
 .pre-title::before {
-  content: '';
+  content: "";
   width: 60px;
   height: 1px;
   background-color: currentColor;
@@ -220,7 +220,7 @@ body {
 }
 
 .hero-list::before {
-  content: '';
+  content: "";
   width: 60px;
   height: 1px;
   background-color: #303030;
@@ -246,7 +246,7 @@ body {
 }
 
 .hero-title {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 72px;
   line-height: 1.18;
   letter-spacing: 0.05em;
@@ -255,7 +255,7 @@ body {
 }
 
 .hero-title::before {
-  content: '';
+  content: "";
   width: 40px;
   height: 40px;
   background-color: #f7f7f7;
@@ -267,7 +267,7 @@ body {
 }
 
 .hero-title::after {
-  content: '!';
+  content: "!";
 }
 
 .hero-post-title {
@@ -374,7 +374,7 @@ body {
 }
 
 .prices-item::before {
-  content: '';
+  content: "";
   width: 100px;
   height: 1px;
   background-color: rgba(157, 164, 189, 0.12);
@@ -401,7 +401,7 @@ body {
 }
 
 .prices-item-text:first-child:before {
-  content: '\1F488';
+  content: "\1F488";
   opacity: 0;
 }
 .prices-btn {
@@ -458,7 +458,7 @@ body {
 }
 
 .benefits-item .count::after {
-  content: '+';
+  content: "+";
   font-weight: 600;
   font-size: 16px;
   line-height: calc(22 / 16);
